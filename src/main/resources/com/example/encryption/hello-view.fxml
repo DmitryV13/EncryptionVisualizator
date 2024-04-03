@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.encryption.MainController">
+   <children>
+      <Label fx:id="welcomeText" layoutX="151.0" layoutY="154.0" text="Encryption Helper v1.0" textFill="#9d9d9d">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="574.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Encryption">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAsym" text="Assymetric" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSym" text="Symmetric" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Digital signature">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onDigit" text="Digital Signature" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

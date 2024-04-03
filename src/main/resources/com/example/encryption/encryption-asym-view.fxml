@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="564.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.encryption.EncryptAsymController">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="574.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Actions">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onBack" text="Back" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TextArea fx:id="plainText1" layoutX="14.0" layoutY="176.0" prefHeight="134.0" prefWidth="219.0" />
+        <TextField fx:id="publicKey" layoutX="132.0" layoutY="110.0" prefHeight="25.0" prefWidth="794.0" promptText="public key" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="11.0" />
+        <TextArea fx:id="encodedPublicText1" layoutX="417.0" layoutY="176.0" prefHeight="56.0" prefWidth="509.0" AnchorPane.leftAnchor="417.0" AnchorPane.rightAnchor="11.0" />
+        <Button layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#onGenerateKey" prefHeight="25.0" prefWidth="101.0" text="Generate Key" />
+        <Button layoutX="254.0" layoutY="185.0" mnemonicParsing="false" onAction="#onConvertTPubE" prefHeight="38.0" prefWidth="144.0" text="Convert (public key) -&gt;" />
+        <Button layoutX="246.0" layoutY="424.0" mnemonicParsing="false" onAction="#onConvertEPrivT" prefHeight="38.0" prefWidth="116.0" text="(private key) -&gt;" />
+        <Label layoutX="14.0" layoutY="146.0" prefHeight="20.0" prefWidth="66.0" text="Text">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="417.0" layoutY="146.0" prefHeight="20.0" prefWidth="116.0" text="Encrypted text">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <TextField fx:id="privateKey" layoutX="132.0" layoutY="75.0" prefHeight="25.0" prefWidth="794.0" promptText="private key" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="11.0" />
+      <TextArea fx:id="encodedPublicText2" layoutX="14.0" layoutY="343.0" prefHeight="200.0" prefWidth="219.0" />
+      <TextArea fx:id="encodedPrivateText1" layoutX="417.0" layoutY="253.0" prefHeight="56.0" prefWidth="509.0" AnchorPane.leftAnchor="417.0" AnchorPane.rightAnchor="11.0" />
+      <Button layoutX="254.0" layoutY="262.0" mnemonicParsing="false" onAction="#onConvertTPrivE" prefHeight="38.0" prefWidth="144.0" text="Convert (private key) -&gt;" />
+      <Button layoutX="594.0" layoutY="424.0" mnemonicParsing="false" onAction="#onConvertEPubT" prefHeight="38.0" prefWidth="116.0" text="&lt;- (public key)" AnchorPane.rightAnchor="227.0" />
+      <TextArea fx:id="plainText2" layoutX="375.0" layoutY="343.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="362.0" />
+      <TextArea fx:id="encodedPrivateText2" layoutX="723.0" layoutY="343.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="377.0" layoutY="317.0" prefHeight="20.0" prefWidth="42.0" text="Text">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="319.0" text="Encrypted text (public key)" />
+      <Label layoutX="723.0" layoutY="319.0" text="Encrypted text (private key)" AnchorPane.rightAnchor="69.33333333333334" />
+      <ChoiceBox fx:id="keyLength" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="101.0" />
+    </children>
+</AnchorPane>
