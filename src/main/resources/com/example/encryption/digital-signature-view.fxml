@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.encryption.MainController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="678.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.encryption.DigitalSignatureController">
     <children>
-
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="574.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Actions">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onBack" text="Back" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <Button layoutX="16.0" layoutY="74.0" mnemonicParsing="false" onAction="#onGenerateKey" prefHeight="25.0" prefWidth="102.0" text="Generate key" />
+      <TextField fx:id="privateKey" layoutX="134.0" layoutY="74.0" prefHeight="25.0" prefWidth="562.0" promptText="private key" AnchorPane.leftAnchor="139.0" AnchorPane.rightAnchor="11.0" />
+      <TextField fx:id="publicKey" layoutX="134.0" layoutY="112.0" prefHeight="25.0" prefWidth="562.0" promptText="public key" AnchorPane.leftAnchor="139.0" AnchorPane.rightAnchor="11.0" />
+      <ChoiceBox fx:id="keyLength" layoutX="16.0" layoutY="38.0" prefHeight="25.0" prefWidth="102.0" />
+      <TextArea fx:id="plainText1" layoutX="18.0" layoutY="186.0" prefHeight="200.0" prefWidth="201.0" />
+      <Label layoutX="19.0" layoutY="163.0" prefHeight="20.0" prefWidth="59.0" text="User 1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="256.0" layoutY="222.0" mnemonicParsing="false" onAction="#onCreateSignature" prefHeight="37.0" prefWidth="117.0" text="Create signature" />
+      <TextArea fx:id="hash1" layoutX="404.0" layoutY="186.0" prefHeight="83.0" prefWidth="298.0" AnchorPane.leftAnchor="403.0" AnchorPane.rightAnchor="11.0" />
+      <TextArea fx:id="signature1" layoutX="404.0" layoutY="302.0" prefHeight="83.0" prefWidth="298.0" AnchorPane.leftAnchor="403.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="404.0" layoutY="163.0" prefHeight="20.0" prefWidth="31.0" text="Hash">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="273.0" prefHeight="25.0" prefWidth="73.0" text="Signature">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="278.0" layoutY="283.0" mnemonicParsing="false" onAction="#onSend" prefHeight="37.0" prefWidth="73.0" text="Send" />
+      <TextArea fx:id="signature2" layoutX="19.0" layoutY="554.0" prefHeight="83.0" prefWidth="200.0" />
+      <TextArea fx:id="plainText2" layoutX="18.0" layoutY="438.0" prefHeight="83.0" prefWidth="200.0" />
+      <Label layoutX="19.0" layoutY="408.0" text="User 2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="528.0" prefHeight="25.0" prefWidth="59.0" text="Signature">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="278.0" layoutY="465.0" mnemonicParsing="false" onAction="#onVerify" prefHeight="29.0" prefWidth="73.0" text="Verify" />
+      <TextArea fx:id="hash2" layoutX="404.0" layoutY="438.0" prefHeight="83.0" prefWidth="298.0" AnchorPane.leftAnchor="403.0" AnchorPane.rightAnchor="11.0" />
+      <Label fx:id="verified" layoutX="405.0" layoutY="554.0" prefHeight="29.0" prefWidth="241.0" text="Verified">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="404.0" layoutY="408.0" text="Hash">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

@@ -54,7 +54,13 @@ public class MainController implements Initializable {
     
     @FXML
     protected void onDigit() throws IOException {
+        Stage stage = StaticData.getStage();
         
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("digital-signature-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 1100);
+        stage.setScene(scene);
+        
+        stage.show();
     }
     
     @Override
