@@ -56,7 +56,7 @@ public class EncryptSymController {
             encodedText.setText(StaticData.getEncodedText(cipher, "qwerty"));
         }
         cipher.init(Cipher.DECRYPT_MODE, StaticData.getSecretSKey());
-        plainText.setText(StaticData.getTextEncoded(cipher, encodedText.getText()));
+        plainText.setText(StaticData.getDecodedText(cipher, encodedText.getText()));
     }
     
     @FXML

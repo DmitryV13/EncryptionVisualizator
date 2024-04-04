@@ -65,7 +65,7 @@ public class EncryptAsymController {
             encodedPrivateText2.setText(StaticData.getEncodedText(cipher, "qwerty"));
         }
         cipher.init(Cipher.DECRYPT_MODE, StaticData.getKeyPairPrivPub().getPublic());
-        plainText2.setText(StaticData.getTextEncoded(cipher, encodedPrivateText2.getText()));
+        plainText2.setText(StaticData.getDecodedText(cipher, encodedPrivateText2.getText()));
     }
     
     @FXML
@@ -80,7 +80,7 @@ public class EncryptAsymController {
             encodedPublicText2.setText(StaticData.getEncodedText(cipher, "qwerty"));
         }
         cipher.init(Cipher.DECRYPT_MODE, StaticData.getKeyPairPrivPub().getPrivate());
-        plainText2.setText(StaticData.getTextEncoded(cipher, encodedPublicText2.getText()));
+        plainText2.setText(StaticData.getDecodedText(cipher, encodedPublicText2.getText()));
     }
     
     @FXML

@@ -18,7 +18,6 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import java.io.IOException;
-import java.math.BigInteger;
 import java.security.*;
 
 public class DigitalSignatureController {
@@ -154,9 +153,7 @@ public class DigitalSignatureController {
         
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.DECRYPT_MODE, StaticData.getKeyPairPrivPub().getPublic());
-        String s1 = hash2.getText();
-        String s2 = StaticData.getTextEncoded(cipher, signature2.getText());
-        if(StaticData.getTextEncoded(cipher, signature2.getText()).equals(hash2.getText())){
+        if(StaticData.getDecodedText(cipher, signature2.getText()).equals(hash2.getText())){
             verified.setText("VERIFICATION PASSED");
         }else{
             verified.setText("VERIFICATION FAILED");
