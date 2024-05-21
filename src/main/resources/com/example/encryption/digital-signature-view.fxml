@@ -53,7 +53,7 @@
       </Label>
       <Button layoutX="278.0" layoutY="465.0" mnemonicParsing="false" onAction="#onVerify" prefHeight="29.0" prefWidth="73.0" text="Verify" />
       <TextArea fx:id="hash2" layoutX="404.0" layoutY="438.0" prefHeight="83.0" prefWidth="298.0" AnchorPane.leftAnchor="403.0" AnchorPane.rightAnchor="11.0" />
-      <Label fx:id="verified" layoutX="405.0" layoutY="554.0" prefHeight="29.0" prefWidth="241.0" text="Verified">
+      <Label fx:id="verified" layoutX="405.0" layoutY="554.0" prefHeight="29.0" prefWidth="241.0" text="Verifiсation">
          <font>
             <Font size="14.0" />
          </font></Label>

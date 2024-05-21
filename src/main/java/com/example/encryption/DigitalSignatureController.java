@@ -53,7 +53,7 @@ public class DigitalSignatureController {
     private void onBack() throws IOException {
         Stage stage = StaticData.getStage();
         
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setScene(scene);
         

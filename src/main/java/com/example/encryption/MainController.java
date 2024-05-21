@@ -34,7 +34,7 @@ public class MainController implements Initializable {
     protected void onAsym() throws IOException {
         Stage stage = StaticData.getStage();
         
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("encryption-asym-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("encryption-asym-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 550);
         stage.setScene(scene);
         
@@ -45,7 +45,7 @@ public class MainController implements Initializable {
     protected void onSym() throws IOException {
         Stage stage = StaticData.getStage();
         
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("encryption-sym-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("encryption-sym-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setScene(scene);
         
@@ -56,7 +56,7 @@ public class MainController implements Initializable {
     protected void onDigit() throws IOException {
         Stage stage = StaticData.getStage();
         
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("digital-signature-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("digital-signature-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 1100);
         stage.setScene(scene);
         
